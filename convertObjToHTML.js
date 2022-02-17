@@ -31,6 +31,15 @@ const compHTML = (pcObject) => {
 	<div>Hard drive space: ${pcObject.specs.hardDrive}</div>
 	<div>Processor speed: ${pcObject.specs.processor} Ghz</div>
     </section>`
-    return console.log(compHTML);
+    return compHTML
 }
-compHTML(applComputer)
+
+
+const appPCHTML = compHTML(applComputer);
+const winPCHTML = compHTML(winComputer);
+
+const appPCHTMLcontainer = document.querySelector("#appDiv");
+const winPCHTMLcontainer = document.querySelector("#winDiv");
+
+appPCHTMLcontainer.innerHTML = appPCHTML
+winPCHTMLcontainer.innerHTML = winPCHTML
